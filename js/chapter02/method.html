@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "web he she me world love";
+        var ex1 = str.charAt(4);
+        var ex2 = str.indexOf("he");
+        //몇번째의 위치에 있는지 숫자로 알려준다.
+        var ex3 = str.match("he");
+        var ex4 = str.replace("he","love");
+        var ex5 = str.search("world");
+        //indexOf와 마찬가지로 번호로 알려준다.
+        var ex6 = str.slice(5,10);
+        var ex7 = str.substring(5,10);
+        var ex8 = str.substring(2,5);
+        //slice와 substring의 차이는 slice는 음수(-) 가 인식 되고 substring은 음수가 인식이 되지 않는다.
+        var ex9 = str.split("e");
+        var ex10 = str.toUpperCase();
+        var ex11 = str.length;
+        //length 뒤에 () 쓰지 않는것 기억하자
+
+        var text = "ABCD";
+        var ex12 = text.charCodeAt(0);
+        var ex13 = String.fromCharCode("A");
+        var t = "      hello ";
+        var ex14 = t.trim();
+
+        document.write(ex1 + "<br>");
+        document.write(ex2 + "<br>");   
+        document.write(ex3 + "<br>");
+        document.write(ex4 + "<br>");
+        document.write(ex5 + "<br>");
+        document.write(ex6 + "<br>");
+        document.write(ex7 + "<br>");
+        document.write(ex8 + "<br>");
+        document.write(ex9 + "<br>");
+        document.write(ex10 + "<br>");
+        document.write(ex11 + "<br>");
+        document.write(ex12 + "<br>");
+        document.write(ex13 + "<br>");
+        document.write(t + "<br>");
+        document.write(ex14 + "<br>");
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

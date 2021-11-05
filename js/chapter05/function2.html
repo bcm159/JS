@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        var color = ["white","yellow","aqua","green"];
+
+        var i = 0;
+        function changeColor(){
+            i++;
+            if(i >= color.length){
+                i = 0;
+            }
+
+            var bodyTag = document.getElementById("theBody");
+            //getElementById("id") 는 해당 태그에 접근하여 사용하는 문법
+            bodyTag.style.backgroundColor = color[i];
+        }
+
+        function myFnc(name,area){
+            document.write("안녕하세요" + name + "입니다.","<br>");
+            document.write("사는곳은" + area + "입니다.","<br>");
+        }
+
+        myFnc("장지혁","인천");
+ */
+        var id = "abcd";
+        var pw = "1234";
+
+        function login(name,password){
+            if(name == id){
+                if(password == pw)  document.write(id + "님 환영합니다.");
+                else{
+                alert("잘못된 비밀번호 입니다.");
+                }
+            }   else{
+                alert("잘못된 아이디입니다.");
+            }
+        }
+
+/* 
+        var userId = prompt("아이디를 입력하세요");
+        var userpw = prompt("비밀번호를 입력하세요");
+
+        login(userId,userpw);
+ */
+
+        function testAvg(arrData){
+            var sum = 0;
+            for(i in arrData){
+                sum += Number(prompt(arrData[i] + "점수는?","0"));
+            }
+
+            var avg = sum / arrData.length;
+            return avg;
+
+        }
+        var arrSubject = ["국어","영어"];
+        var result = testAvg(arrSubject);
+
+        document.write(result);
+    </script>
+</head>
+<body id="theBody">
+    <button onclick="changeColor();">배경색 바꾸기</button>  
+</body>
+</html>

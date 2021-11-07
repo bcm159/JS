@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+//  객체 생성자 생성
+    function CheckWeight(name,height,weight){
+        this.username = name;
+        this.userheight = height;
+        this.userweight = weight;
+        this.minweight;
+        this.maxweight;
+
+//  속성값 출력
+        //this.getInfo = function(){
+        // 위와 같이 저장하면 메모리 차지 많아진다. 프로토타입 사용해서 메모리 용량 줄이자
+        CheckWeight.prototype.getInfo = function(){
+        var str = "";
+        str += "이름 : " + this.username + ", ";
+        str += "키 : " + this.userheight + ", ";
+        str += "몸무게 : " + this.userweight;
+
+        return str;
+        }
+
+        CheckWeight.prototype.getResult = function(){
+            this.minweight = (this.userheight - 100) * 0.9 - 5;
+            this.maxweight = (this.userheight - 100) * 0.9 + 5;
+
+            if(this.userweight >= this.minweight && this.userweight <= this.maxweight)   return "정상 몸무게입니다.";
+            else if(this.userweight < this.minweight)   return "미달입니다.";
+            else    return "초과 몸무게입니다.";
+        }
+
+    }
+
+    var jang = new CheckWeight("장지혁",182,100);
+
+    console.log(jang);
+
+    document.write(jang.getInfo()+"<br>");
+    document.write(jang.getResult()+"<br>");
+
+    var name = "장지혁";
+    var encode = encodeURI(name);
+    var decode = decodeURI(encode);
+
+    document.write(name + "<br>");
+    document.write(encode + "<br>");
+    document.write(decode + "<br>");
+    
+    
+
+</script>
+<body>
+    
+</body>
+</html>

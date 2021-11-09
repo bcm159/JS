@@ -12,6 +12,17 @@
             $("#member_f :password").css("color","red");
             $("#wraip a[href^=http]").css("color","black");
             // $("p:visible").css("color","red");
+
+            var z1 = $("#zone1 :selected").val();
+            console.log(z1);
+
+            $("#inner_1 p:contains(내용1)").css("color","red");
+            $("#inner_1 p:has(strong)").css("color","blue");
+            //$("#outer_wrap").contents().css({"border":"1px solid #ccc"});
+
+            $("#inner_2 p").not(":first").css("border","1px solid #ccc");
+
+            $("#inner_2").find(".text4").css({"background-color":"yellow"});
         })
     </script>
 </head>
@@ -33,5 +44,29 @@
             <input type="password" name="user_pw" id="user_pw">
         </p>
     </form>
+
+    <form action="#">
+        <p id="zone1">
+            <option value="opt1">옵션1</option>
+            <option value="opt2 selected">옵션2</option>
+            <option value="opt3">옵션3</option>
+        </p>
+    </form>
+
+    <div class="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h1>contains(),contents(),has()</h1>
+            <p><span>내용1</span></p>
+            <p><strong>내용2</strong></p>
+            <p><span>내용3</span></p>
+        </section>
+        <section id="inner_2">
+            <h1>not(),end()</h1>
+            <p class="text4">내용4</p>
+            <p>내용5</p>
+            <p>내용6</p>
+        </section>
+    </div>
 </body>
 </html>
